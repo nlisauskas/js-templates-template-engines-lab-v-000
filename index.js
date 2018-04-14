@@ -14,6 +14,8 @@ function createPost() {
   document.getElementById("start").innerHTML = templateHTML;
 
   templateFn = _.template(postTemplate);
+
+  templateHTML = templateFn({'title': title, 'body': body, 'author': author})
 }
 
 function postComment() {
