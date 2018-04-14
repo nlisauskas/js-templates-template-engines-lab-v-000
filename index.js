@@ -8,6 +8,10 @@ function createPost() {
   var postTemplate = document.getElementById("post-template").innerHTML;
 
   var templateFn = _.template(pageTemplate);
+
+  var templateHTML = templateFn();
+
+  document.getElementById("start").innerHTML = templateHTML;
 }
 
 function postComment() {
