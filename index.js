@@ -23,7 +23,7 @@ function createPost() {
 
   templateHTML = templateFn();
 
-  document.getElementById("start").innrHTML += templateHTML;
+  document.getElementById("start").innerHTML += templateHTML;
 }
 
 function postComment() {
@@ -31,4 +31,10 @@ function postComment() {
   var commenter = document.getElementById("commenterName").value;
 
   var commentTemplate = document.getElementById("comment-template").innerHTML;
+
+  var templateFn = _.template(commentTemplate);
+
+  var templateHTML = templateFn({'comment': comment, 'commenter': commenter})
+
+  document.getElementsByID("comments").innerHTML += templateHTML;
 }
