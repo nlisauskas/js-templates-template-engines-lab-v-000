@@ -36,5 +36,5 @@ function postComment() {
 
   var templateHTML = templateFn({'comment': comment, 'commenter': commenter})
 
-  document.getElementsByID("comments").innerHTML += templateHTML;
+  document.getElementByID("comments").innerHTML += templateHTML;
 }
