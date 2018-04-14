@@ -12,6 +12,8 @@ function createPost() {
   var templateHTML = templateFn();
 
   document.getElementById("start").innerHTML = templateHTML;
+
+  templateFn = _.template(postTemplate);
 }
 
 function postComment() {
