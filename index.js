@@ -27,5 +27,8 @@ function createPost() {
 }
 
 function postComment() {
+  var comment = document.getElementById("commentText").value;
+  var commenter = document.getElementById("commenterName").value;
 
+  var commentTemplate = document.getElementById("comment-template").innerHTML;
 }
